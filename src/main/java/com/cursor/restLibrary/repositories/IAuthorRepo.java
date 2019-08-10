@@ -1,7 +1,7 @@
-package com.cursor.rest_library.repositories;
+package com.cursor.restLibrary.repositories;
 
-import com.cursor.rest_library.beans.Author;
-import com.cursor.rest_library.beans.Book;
+import com.cursor.restLibrary.beans.Author;
+import com.cursor.restLibrary.beans.Book;
 
 import java.util.List;
 

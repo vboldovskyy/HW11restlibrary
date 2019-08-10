@@ -1,4 +1,4 @@
-package com.cursor.rest_library.beans;
+package com.cursor.restLibrary.beans;
 
 import lombok.Data;
 

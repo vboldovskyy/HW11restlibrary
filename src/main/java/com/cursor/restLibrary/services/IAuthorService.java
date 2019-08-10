@@ -1,9 +1,6 @@
-package com.cursor.rest_library.services;
+package com.cursor.restLibrary.services;
 
-import com.cursor.rest_library.beans.Author;
-import com.cursor.rest_library.beans.Book;
-
-import java.util.List;
+import com.cursor.restLibrary.beans.Author;
 
 public interface IAuthorService {
     Author addAuthor(Author a);

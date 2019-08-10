@@ -1,8 +1,7 @@
-package com.cursor.rest_library.controllers;
+package com.cursor.restLibrary.controllers;
 
-
-import com.cursor.rest_library.beans.Book;
-import com.cursor.rest_library.services.IBookService;
+import com.cursor.restLibrary.beans.Book;
+import com.cursor.restLibrary.services.IBookService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;

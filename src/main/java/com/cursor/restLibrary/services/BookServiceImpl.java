@@ -1,7 +1,7 @@
-package com.cursor.rest_library.services;
+package com.cursor.restLibrary.services;
 
-import com.cursor.rest_library.beans.Book;
-import com.cursor.rest_library.repositories.IBookRepo;
+import com.cursor.restLibrary.beans.Book;
+import com.cursor.restLibrary.repositories.IBookRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

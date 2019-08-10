@@ -1,7 +1,8 @@
-package com.cursor.rest_library.controllers;
+package com.cursor.restLibrary.controllers;
 
-import com.cursor.rest_library.beans.Author;
-import com.cursor.rest_library.services.IAuthorService;
+import com.cursor.restLibrary.beans.Author;
+import com.cursor.restLibrary.services.AuthorServiceImpl;
+import com.cursor.restLibrary.services.IAuthorService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @AllArgsConstructor
 @RequestMapping(path = "/author", produces = MediaType.APPLICATION_JSON_VALUE)
 public class AuthorController {
-    private final IAuthorService authorService;
+    private final AuthorServiceImpl authorService;
 
     @PostMapping("/add")
     @ResponseBody

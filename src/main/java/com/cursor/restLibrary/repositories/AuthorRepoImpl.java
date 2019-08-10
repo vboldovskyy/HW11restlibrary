@@ -1,7 +1,7 @@
-package com.cursor.rest_library.repositories;
+package com.cursor.restLibrary.repositories;
 
-import com.cursor.rest_library.beans.Author;
-import com.cursor.rest_library.beans.Book;
+import com.cursor.restLibrary.beans.Author;
+import com.cursor.restLibrary.beans.Book;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -14,8 +14,8 @@ import java.util.*;
 @RequiredArgsConstructor
 public class AuthorRepoImpl implements IAuthorRepo {
 
-    @Autowired
-    private IBookRepo bookRepo;
+
+    private final IBookRepo bookRepo;
     private final Map<Integer, Author> authorsMap = new HashMap<>();
 
     @PostConstruct
@@ -54,8 +54,8 @@ public class AuthorRepoImpl implements IAuthorRepo {
 
         Author author = authorsMap.get(authorId);
         Book book = bookRepo.getBook(bookId);
-        if (author == null || book == null)
-            return false;
+        if (author == null || book == null){
+            return false;}
         else {
             author.getBooksWritten().add(book);
             book.setAuthor(author);
@@ -77,8 +77,8 @@ public class AuthorRepoImpl implements IAuthorRepo {
     @Override
     public List<Book> sortByAuthor(Integer authorId) {
         Author author = authorsMap.get(authorId);
-        if (author == null) return new ArrayList<>();
-        else return author.getBooksWritten();
+        if (author == null) {return new ArrayList<>();}
+        else {return author.getBooksWritten();}
     }
 
     @Override

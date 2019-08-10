@@ -1,7 +1,7 @@
-package com.cursor.rest_library.repositories;
+package com.cursor.restLibrary.repositories;
 
 
-import com.cursor.rest_library.beans.Book;
+import com.cursor.restLibrary.beans.Book;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -21,6 +21,7 @@ public class BookRepoImpl implements IBookRepo {
         first.setId(1);
         first.setDescription("Very dull book");
         first.setTitle("Holy Bible");
+        first.setGenre("Religion");
         first.setRating(3.2);
         booksMap.put(first.getId(), first);
 
@@ -28,6 +29,7 @@ public class BookRepoImpl implements IBookRepo {
         second.setId(1);
         second.setDescription("Very interesting book");
         second.setTitle("Head First Java");
+        second.setGenre("Programming");
         second.setRating(4.8);
         booksMap.put(second.getId(), second);
     }
@@ -47,8 +49,8 @@ public class BookRepoImpl implements IBookRepo {
 
     @Override
     public Book updateBook(Integer bookId, Book book) {
-        if (!book.getId().equals( bookId))
-            book.setId(bookId);
+        if (!book.getId().equals(bookId)){
+            book.setId(bookId);}
         booksMap.put(bookId, book);
         return book;
     }
