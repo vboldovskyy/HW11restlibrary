@@ -16,7 +16,7 @@ import java.io.IOException;
 //@RunWith(SpringRunner.class)
 //@SpringBootTest
 public class RestLibraryApplicationTests {
-	final String BASE_URL = "http://localhost:9000/";
+	static final String BASE_URL = "http://localhost:9000/";
 	public static final MediaType JSON= MediaType.parse("application/json; charset=utf-8");
 	OkHttpClient client = new OkHttpClient();
 
